@@ -1,0 +1,18 @@
+{
+  "name": "gakuen-kaichou",
+  "version": "0.1.0",
+  "description": "The source collection and inspection module/service.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "chokidar": "^3.4.2",
+    "shelljs": "^0.8.4"
+  }
+}

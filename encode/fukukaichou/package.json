@@ -1,0 +1,12 @@
+{
+  "name": "gakuen-fukukaichou",
+  "version": "0.0.0",
+  "description": "Intermediate web interface/dashboard for uploading videos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "private": true
+}

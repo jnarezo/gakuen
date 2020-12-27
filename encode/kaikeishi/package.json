@@ -1,0 +1,21 @@
+{
+  "name": "gakuen-kaikeishi",
+  "version": "0.1.0",
+  "description": "Handles video upload/metadata collection, links to videos located in object storage (like S3).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "dropbox": "^5.2.1",
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "amqplib": "^0.6.0",
+    "dotenv": "^8.2.0"
+  }
+}

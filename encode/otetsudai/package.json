@@ -1,0 +1,18 @@
+{
+  "name": "gakuen-otetsudai",
+  "version": "0.1.0",
+  "description": "An encoding train. Given videos, encodes them and outputs in local storage.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "shelljs": "^0.8.4"
+  }
+}

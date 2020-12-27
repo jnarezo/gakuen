@@ -1,0 +1,52 @@
+version: '3'
+services:
+  rabbitmq:
+    build: ./rabbitmq
+    hostname: 'rabbitmq'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
+  # fukukaichou:
+  #   build: ./encode/fukukaichou
+  #   ports:
+  #     - '5010:5010'
+  #   volumes:
+  #     - media:/media
+  kaichou:
+    build: ./encode/kaichou
+    ports:
+      - '5011:5011'
+    volumes:
+      - media:/media
+    depends_on:
+      - rabbitmq
+  otetsudai:
+    build: ./encode/otetsudai
+    ports:
+      - '5012:5012'
+    volumes:
+      - media:/media
+    depends_on:
+      - rabbitmq
+  kaikeishi:
+    build: ./encode/kaikeishi
+    ports:
+      - '5013:5013'
+    volumes:
+      - media:/media
+    depends_on:
+      - rabbitmq
+    environment:
+      DROPBOX_ACCESS_TOKEN: 
+  shoki:
+    build: ./encode/shoki
+    ports:
+      - '5014:5014'
+    volumes:
+      - media:/media
+    depends_on:
+      - rabbitmq
+
+volumes:
+  media:

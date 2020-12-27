@@ -1,0 +1,18 @@
+{
+  "name": "gakuen-shoki",
+  "version": "0.1.0",
+  "description": "Endpoint and generator for DASH manifests.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "koa": "^2.13.0",
+    "shelljs": "^0.8.4"
+  }
+}
