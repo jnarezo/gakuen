@@ -29,6 +29,18 @@ inspect them, encode them, and optionally upload them to some database or
 cloud storage and generate streaming manifests to make them available on
 a VOD/streaming website.
 
+![Video Encoding Diagram](img/gakuen-video-diagram.png)
+
+A few problems for me have been separating the encoding, uploading, and manifest
+services since they all require access to the encoded media files. Using Docker,
+the services can share a common *media* volume. But right now I don't see how
+these services can be scaled using some cloud-based solutions like AWS.
+
+My current thoughts would be to somehow *stream* the encoded output to the
+upload service (which may be able finally stream it to the cloud). To make it
+possible for the encoders to work in parallel and scale horizontally, they
+cannot stream the media itself to storage.
+
 ## Running
 The pipeline is currently designed to run on containers, so it may be deployed
 on a single-machine, or distributed over multiple machines.
